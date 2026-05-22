@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portfolio di Nicola Carola — Junior Full Stack Web Developer. Progetti con React, TypeScript, Laravel e MySQL. Disponibile per opportunità e collaborazioni.">
+<meta name="description" content="Portfolio di Nicola Carola — Junior Full Stack Web Developer. Progetti con React, TypeScript, Laravel, Java Enterprise e MySQL. AI Tools. Disponibile per opportunità e collaborazioni.">
 <link rel="icon" href="/favicon.ico">
 <title>Nicola Carola – Junior Full Stack Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +82,6 @@
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--warm); }
 
-  /* CV Download button in nav */
   .nav-cv-btn {
     display: flex; align-items: center; gap: 0.45rem;
     padding: 0.45rem 1rem;
@@ -129,7 +128,6 @@
   .btn-outline { border: 1px solid var(--border); color: var(--white); }
   .btn-outline:hover { border-color: var(--warm); color: var(--warm); transform: translateY(-2px); }
 
-  /* Download CV button — dashed border style */
   .btn-download {
     border: 1px dashed var(--border);
     color: var(--muted);
@@ -151,6 +149,30 @@
     background: radial-gradient(circle, rgba(55,79,89,0.35) 0%, transparent 70%);
     filter: blur(50px); pointer-events: none;
   }
+
+  /* ── ABOUT STRIP ── */
+  .about-strip {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 2.2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative; z-index: 1;
+  }
+  .about-item .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem; color: var(--muted);
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .about-item .value {
+    font-size: 0.92rem; font-weight: 700; color: var(--white);
+    line-height: 1.4;
+  }
+  .about-item .value a { color: var(--warm); text-decoration: none; }
+  .about-item .value a:hover { text-decoration: underline; }
 
   section { padding: 6rem 4rem; position: relative; z-index: 1; }
   .section-label { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--warm); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 0.5rem; }
@@ -194,7 +216,6 @@
   .contact-link { display: flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.4rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); text-decoration: none; font-family: 'Space Mono', monospace; font-size: 0.78rem; transition: all 0.2s; }
   .contact-link:hover { border-color: var(--warm); color: var(--warm); transform: translateY(-2px); }
 
-  /* CV download link in contact section — slightly highlighted */
   .contact-link-cv {
     border-style: dashed;
     color: var(--warm);
@@ -229,6 +250,7 @@
     .hero { padding: 7rem 1.5rem 3rem; }
     section { padding: 4rem 1.5rem; }
     .hero-deco { display: none; }
+    .about-strip { grid-template-columns: 1fr 1fr; padding: 2rem 1.5rem; }
     .tl-item { grid-template-columns: 1fr; }
     .tl-item::before, .tl-dot { display: none; }
     .tl-date { text-align: left; }
@@ -250,7 +272,7 @@
     <li><a href="#projects">Progetti</a></li>
     <li><a href="#contact">Contatti</a></li>
     <li>
-      <a href="Cv_Nicola_Carola.pdf" download class="nav-cv-btn" aria-label="Scarica il mio CV">
+      <a href="Nicola_Carola_CV_2026.pdf" download class="nav-cv-btn" aria-label="Scarica il mio CV">
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
@@ -267,13 +289,13 @@
     <div class="hero-tag">Disponibile per opportunità</div>
     <h1>Nicola<br><span>Carola</span></h1>
     <p class="hero-desc">
-      Junior Full Stack Web Developer con esperienza in React, TypeScript, Laravel e MySQL.
-      Appassionato di sviluppo web moderno, integrazione front-end/back-end e database relazionali.
+      Junior Full Stack Web Developer con esperienza in React, TypeScript, Laravel, Java e MySQL.
+      Formazione in Java Enterprise e interesse per l'utilizzo dell'AI nello sviluppo software.
     </p>
     <div class="hero-btns">
       <a href="#projects" class="btn btn-primary">Vedi i Progetti</a>
       <a href="#contact" class="btn btn-outline">Contattami</a>
-      <a href="Cv_Nicola_Carola.pdf" download class="btn btn-download" aria-label="Scarica il mio CV in PDF">
+      <a href="Nicola_Carola_CV_2026.pdf" download class="btn btn-download" aria-label="Scarica il mio CV in PDF">
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
@@ -285,6 +307,30 @@
   </div>
   <div class="hero-deco"></div>
 </section>
+
+<!-- ABOUT STRIP -->
+<div class="about-strip">
+  <div class="about-item">
+    <div class="label">Posizione</div>
+    <div class="value">Napoli, IT</div>
+  </div>
+  <div class="about-item">
+    <div class="label">Telefono</div>
+    <div class="value"><a href="tel:+393806453342" style="color:var(--white);text-decoration:none;">380 645 3342</a></div>
+  </div>
+  <div class="about-item">
+    <div class="label">Email</div>
+    <div class="value"><a href="mailto:nicola.carola01@gmail.com">nicola.carola01@gmail.com</a></div>
+  </div>
+  <div class="about-item">
+    <div class="label">Profili</div>
+    <div class="value">
+      <a href="https://www.linkedin.com/in/nicola-carola-b87632358" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/NicolaCarola" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</div>
 
 <section id="skills">
   <div class="section-label">// competenze</div>
@@ -302,21 +348,32 @@
       <h3>Back-End</h3>
       <div class="skill-tags">
         <span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MVC</span>
-        <span class="tag">REST API</span><span class="tag">Python</span><span class="tag">Java</span>
+        <span class="tag">Java</span><span class="tag">JDBC</span><span class="tag">Servlet</span>
+        <span class="tag">JSP</span><span class="tag">REST API</span><span class="tag">Python</span>
       </div>
     </div>
     <div class="skill-card reveal">
       <h3>Database</h3>
       <div class="skill-tags">
         <span class="tag">MySQL</span><span class="tag">SQL</span>
-        <span class="tag">CRUD</span><span class="tag">DB Relazionali</span>
+        <span class="tag">CRUD</span><span class="tag">DDL</span>
+        <span class="tag">DML</span><span class="tag">JOIN</span>
+        <span class="tag">DB Relazionali</span>
       </div>
     </div>
     <div class="skill-card reveal">
-      <h3>Tools & Workflow</h3>
+      <h3>Tools &amp; Workflow</h3>
       <div class="skill-tags">
         <span class="tag">Git</span><span class="tag">GitHub</span>
         <span class="tag">Agile</span><span class="tag">Scrum</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <h3>AI Tools</h3>
+      <div class="skill-tags">
+        <span class="tag">GitHub Copilot</span><span class="tag">Cursor</span>
+        <span class="tag">Claude Code</span><span class="tag">Generative AI</span>
+        <span class="tag">LLM</span><span class="tag">SDK &amp; API AI</span>
       </div>
     </div>
   </div>
@@ -324,8 +381,21 @@
 
 <section id="experience">
   <div class="section-label">// percorso</div>
-  <h2>Esperienza & Formazione</h2>
+  <h2>Esperienza &amp; Formazione</h2>
   <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-date">Apr 2026<br>Mag 2026</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>Academy Java con AI – Java Developer</h3>
+        <div class="company">GiGroup / ItConsulting — 240 ore</div>
+        <ul>
+          <li>Programmazione Java, OOP e Java Enterprise (JDBC, Servlet, JSP)</li>
+          <li>SQL e database relazionali con MySQL</li>
+          <li>Fondamenti web e AI-assisted coding</li>
+        </ul>
+      </div>
+    </div>
     <div class="tl-item reveal">
       <div class="tl-date">Set 2025<br>Ott 2025</div>
       <div class="tl-dot"></div>
@@ -345,8 +415,8 @@
       <div class="tl-dot"></div>
       <div class="tl-content">
         <h3>Corso Full Stack Web Development</h3>
-        <div class="company">ItConsulting – Alta Formazione</div>
-        <p>Corso intensivo di 300 ore su sviluppo web completo: front-end, back-end e database.</p>
+        <div class="company">ItConsulting – Alta Formazione — 300 ore</div>
+        <p>HTML5, CSS3, JavaScript ES6+, PHP e MySQL. CMS, OOP, sicurezza web, introduzione a Java, Python, Prompt Engineering e integrazione AI.</p>
       </div>
     </div>
     <div class="tl-item reveal">
@@ -384,6 +454,15 @@
     </div>
     <div class="project-card reveal">
       <div class="project-num">02 / Progetto Formativo</div>
+      <h3>Progetto Java Enterprise</h3>
+      <p>Sviluppo di applicazioni Java Enterprise con JDBC, Servlet e JSP. Gestione database MySQL tramite SQL avanzato (DDL, DML, JOIN). Applicazione dei principi OOP e sviluppo client-server.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Java</span><span class="stack-tag">JDBC</span>
+        <span class="stack-tag">Servlet</span><span class="stack-tag">JSP</span><span class="stack-tag">MySQL</span>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-num">03 / Progetto Formativo</div>
       <h3>Web App Responsive</h3>
       <p>Interfaccia web responsive con HTML5, CSS3, SASS e Bootstrap. Funzionalità dinamiche con JavaScript ES6+ e ottimizzazione dell'esperienza utente.</p>
       <div class="project-stack">
@@ -416,7 +495,7 @@
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         380 645 3342
       </a>
-      <a href="Cv_Nicola_Carola.pdf" download class="contact-link contact-link-cv" aria-label="Scarica il CV di Nicola Carola in PDF">
+      <a href="Nicola_Carola_CV_2026.pdf" download class="contact-link contact-link-cv" aria-label="Scarica il CV di Nicola Carola in PDF">
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
